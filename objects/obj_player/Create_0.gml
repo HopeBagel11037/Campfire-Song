@@ -20,3 +20,13 @@ E = vk_up
 F = vk_left
 G = vk_down
 A2 = vk_right
+
+playing = []
+recording = false
+
+warmth = 255
+
+move = spr_player_move
+idle = spr_player_idle
+
+has_wood = false

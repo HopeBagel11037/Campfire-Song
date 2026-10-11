@@ -11,7 +11,10 @@
     "name":"Interactables",
     "path":"folders/Objects/Interactables.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_col",
+    "path":"objects/obj_col/obj_col.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

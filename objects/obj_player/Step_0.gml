@@ -17,19 +17,23 @@ switch (STATE){
 		}
 
 		//apply movement 
-		x += hsp 
-		y += vsp 
+		if!(place_meeting(x+hsp,y,obj_col)){
+			x+=hsp
+		}
+		if!(place_meeting(x,y+vsp,obj_col)){
+			y+=vsp
+		} 
 
 		//movement animation
 		if((vsp != 0) or (hsp != 0)){
-			sprite_index = spr_player_move
+			sprite_index = move
 			if (hsp > 0){
 				image_xscale = 1
 			}else if (hsp < 0){
 				image_xscale = -1
 			}
 		}else{
-			sprite_index = spr_player_idle
+			sprite_index = idle
 		}
 
 		//other inputs do an action
@@ -38,7 +42,7 @@ switch (STATE){
 			//interact
 			case ord("E"):
 				var interacted_with = place_meeting(x,y,obj_interactable)
-					with (interacted_with){
+					with (instance_nearest(x,y,interacted_with)){
 						interacted()
 					}
 				break;
@@ -46,20 +50,55 @@ switch (STATE){
 		}
 		break;
 	case "guitar":
+		
+	
 		//player inputs for guitar
-		//switch (keyboard_key){
-			//case A:
-			if(keyboard_check_pressed(A)){
-				sprite_index = spr_player_strum_guitar
-				audio_play_sound(sfx_GuitarA,1,false)
-				//break;
-			}else if(keyboard_check_pressed(B)){
-			//case B:
-				sprite_index = spr_player_strum_guitar
-				audio_play_sound(sfx_GuitarB,1,false)
-				//break;
+		if(keyboard_check_pressed(A)){
+			sprite_index = spr_player_strum_guitar
+			audio_play_sound(sfx_GuitarA,1,false)
+			if(recording){
+				array_insert(playing,(0+array_length(playing)),1)
+				with(obj_notes){
+					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-10,depth-1,obj_note)
+				}
 			}
-		//}
 			
+
+		}else if(keyboard_check_pressed(B)){
+		//case B:
+			sprite_index = spr_player_strum_guitar
+			audio_play_sound(sfx_GuitarB,1,false)
+			if(recording){
+				array_insert(playing,(0+array_length(playing)),2)
+				with(obj_notes){
+					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-15,depth-1,obj_note)
+				}
+			}
+		}
+		
+		if(keyboard_check_pressed(vk_space)){
+			instance_create_layer(x,y-32,layer,obj_notes)
+			recording = true
+			alarm[0] = 300
+		}
+		
+		if(keyboard_check_pressed(vk_tab)){
+			STATE = "walking"
+			instance_create_depth(x,y,depth,obj_guitar_ow)
+		}
+		
 		break;
+}
+
+//warmth cap
+if(warmth > 255){
+	warmth = 255
+}
+
+//dying
+warmth --
+
+//death
+if(warmth <= 0){
+	game_end()
 }
