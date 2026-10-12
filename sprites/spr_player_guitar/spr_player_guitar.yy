@@ -19,9 +19,7 @@
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"82aa4e72-8b07-4bf4-ba4a-f9a75db0d52a","blendMode":0,"displayName":"default","isLocked":false,"name":"82aa4e72-8b07-4bf4-ba4a-f9a75db0d52a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"b1617ab1-b220-4327-ad5f-18d855b49fb0","blendMode":0,"displayName":"default","isLocked":false,"name":"b1617ab1-b220-4327-ad5f-18d855b49fb0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
-    {"$GMImageLayer":"","%Name":"a997810c-7240-4ac1-9248-f66f32b2c8f6","blendMode":0,"displayName":"default","isLocked":false,"name":"a997810c-7240-4ac1-9248-f66f32b2c8f6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"494066ad-0194-454d-8491-e6ef41ff7547","blendMode":0,"displayName":"default","isLocked":false,"name":"494066ad-0194-454d-8491-e6ef41ff7547","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_player_guitar",
   "nineSlice":null,

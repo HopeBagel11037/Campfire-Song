@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_log",
-    "path":"sprites/spr_log/spr_log.yy",
+    "name":"spr_firewood",
+    "path":"sprites/spr_firewood/spr_firewood.yy",
   },
   "spriteMaskId":null,
   "visible":true,

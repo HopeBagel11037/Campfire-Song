@@ -8,7 +8,7 @@ function interacted(){
 	}
 }
 
-	if (distance_to_object(obj_player) < aura){
+	if (distance_to_object(obj_player) < aura) and (fuel > 0){
 		obj_player.warmth += warmth
 	}
 

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.037551,
+  "duration":1.65,
   "exportDir":"",
   "name":"sfx_GuitarA",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfx_GuitarA.mp3",
+  "soundFile":"sfx_GuitarA.wav",
   "volume":1.0,
 }

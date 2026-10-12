@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"M_strum_chord",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":29.538458,
+  "exportDir":"",
+  "name":"M_strum_chord",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"M_strum_chord.wav",
+  "volume":1.0,
+}

@@ -1,0 +1,1 @@
+depth = obj_fox.depth+10

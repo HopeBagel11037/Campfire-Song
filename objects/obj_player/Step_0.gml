@@ -37,20 +37,32 @@ switch (STATE){
 		}
 
 		//other inputs do an action
-		switch (keyboard_key){
+		if(keyboard_check_pressed( ord("E"))){
 	
 			//interact
-			case ord("E"):
-				var interacted_with = place_meeting(x,y,obj_interactable)
-					with (instance_nearest(x,y,interacted_with)){
+
+				interacted_with = place_meeting(x,y,obj_interactable)
+					with (instance_nearest(x,y,obj_interactable)){
 						interacted()
 					}
-				break;
+				
 	
 		}
 		break;
 	case "guitar":
 		
+		
+		//other inputs do an action
+		switch (keyboard_key){
+				
+			case (vk_tab):
+				STATE = "walking"
+				instance_create_depth(x,y,depth,obj_guitar_ow)
+				instance_destroy(obj_tutorial)
+				break;
+		}
+		
+
 	
 		//player inputs for guitar
 		if(keyboard_check_pressed(A)){
@@ -74,19 +86,82 @@ switch (STATE){
 					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-15,depth-1,obj_note)
 				}
 			}
+		}else if(keyboard_check_pressed(C)){
+		//case B:
+			sprite_index = spr_player_strum_guitar
+			audio_play_sound(sfx_GuitarC,1,false)
+			if(recording){
+				array_insert(playing,(0+array_length(playing)),3)
+				with(obj_notes){
+					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-19,depth-1,obj_note)
+				}
+			}
+		}else if(keyboard_check_pressed(D)){
+		//case B:
+			sprite_index = spr_player_strum_guitar
+			audio_play_sound(sfx_GuitarD,1,false)
+			if(recording){
+				array_insert(playing,(0+array_length(playing)),4)
+				with(obj_notes){
+					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-24,depth-1,obj_note)
+				}
+			}
+		}else if(keyboard_check_pressed(E)){
+		//case B:
+			sprite_index = spr_player_strum_guitar
+			audio_play_sound(sfx_GuitarE,1,false)
+			if(recording){
+				array_insert(playing,(0+array_length(playing)),5)
+				with(obj_notes){
+					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-28,depth-1,obj_note)
+				}
+			}
+		}else if(keyboard_check_pressed(F)){
+		//case B:
+			sprite_index = spr_player_strum_guitar
+			audio_play_sound(sfx_GuitarF,1,false)
+			if(recording){
+				array_insert(playing,(0+array_length(playing)),6)
+				with(obj_notes){
+					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-32,depth-1,obj_note)
+				}
+			}
+		}else if(keyboard_check_pressed(G)){
+		//case B:
+			sprite_index = spr_player_strum_guitar
+			audio_play_sound(sfx_GuitarG,1,false)
+			if(recording){
+				array_insert(playing,(0+array_length(playing)),7)
+				with(obj_notes){
+					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-37,depth-1,obj_note)
+				}
+			}
+		}else if(keyboard_check_pressed(A2)){
+		//case B:
+			sprite_index = spr_player_strum_guitar
+			audio_play_sound(sfx_GuitarA2,1,false)
+			if(recording){
+				array_insert(playing,(0+array_length(playing)),8)
+				with(obj_notes){
+					instance_create_depth(x+((array_length(obj_player.playing)-1)*16),y-41,depth-1,obj_note)
+				}
+			}
 		}
 		
 		if(keyboard_check_pressed(vk_space)){
-			instance_create_layer(x,y-32,layer,obj_notes)
+			audio_stop_all()
+			instance_create_depth(x,y-32,depth,obj_notes)
 			recording = true
 			alarm[0] = 300
 		}
 		
-		if(keyboard_check_pressed(vk_tab)){
-			STATE = "walking"
-			instance_create_depth(x,y,depth,obj_guitar_ow)
-		}
+
 		
+		break;
+		
+	case "dead":
+		sprite_index = spr_player_dead
+
 		break;
 }
 
@@ -96,9 +171,16 @@ if(warmth > 255){
 }
 
 //dying
-warmth --
+warmth -= tick
 
 //death
-if(warmth <= 0){
-	game_end()
+if(warmth = 0){
+	STATE = "dead";
+	audio_play_sound(sfx_death,10,false)
+	tick = 0
+	alarm[1] = 600
+	warmth = -1
+	
 }
+
+depth = -y

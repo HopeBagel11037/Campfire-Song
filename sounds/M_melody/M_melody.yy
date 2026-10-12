@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":29.570612,
+  "duration":29.538458,
   "exportDir":"",
   "name":"M_melody",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"M_melody.mp3",
+  "soundFile":"M_melody.wav",
   "volume":1.0,
 }

@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"guitar",
-    "path":"folders/Sprites/Player/guitar.yy",
+    "name":"Movement",
+    "path":"folders/Sprites/Player/Movement.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

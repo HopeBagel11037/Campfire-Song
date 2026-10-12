@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":7.4187756,
+  "duration":29.538458,
   "exportDir":"",
   "name":"M_base",
   "parent":{
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"M_base.mp3",
-  "volume":0.25,
+  "soundFile":"M_base.wav",
+  "volume":1.0,
 }

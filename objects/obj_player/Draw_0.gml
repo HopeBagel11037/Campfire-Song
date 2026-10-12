@@ -8,7 +8,10 @@ if(STATE == "walking"){
 	}
 }
 
-
+if(STATE == "guitar"){
+	draw_sprite(Sprite1,0,x+96,y)
+	
+}
 
 //array_foreach(playing,draw_stuff)
 /*

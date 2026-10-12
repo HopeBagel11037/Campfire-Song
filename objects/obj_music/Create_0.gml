@@ -6,4 +6,7 @@ music = audio_create_sync_group(false)
 
 
 //base, melody, plucking, strumming, solo
-unlocked = [[M_base,false],[M_melody,false]]
+unlocked = [[M_base,false,false],[M_melody,false,false],[M_strum_chord,false,false],[M_pluck_chord,false,false]]
+
+alarm[0] = 600
+audio_play_sound(M_ambi,2,false)

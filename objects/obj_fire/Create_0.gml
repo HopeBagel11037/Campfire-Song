@@ -5,3 +5,5 @@ timer = 3000
 alarm[0] = timer
 
 aura = 175
+
+depth = -y

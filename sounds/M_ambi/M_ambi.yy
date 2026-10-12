@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"M_ambi",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":132.92308,
+  "exportDir":"",
+  "name":"M_ambi",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"M_ambi.wav",
+  "volume":1.0,
+}

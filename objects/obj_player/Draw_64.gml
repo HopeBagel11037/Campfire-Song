@@ -1,1 +1,1 @@
-draw_text(0,0,warmth)
+draw_text(0,0,interacted_with)

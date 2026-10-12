@@ -30,3 +30,8 @@ move = spr_player_move
 idle = spr_player_idle
 
 has_wood = false
+
+page = 0 
+tick = 0.2
+
+interacted_with = "help"
